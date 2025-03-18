@@ -69,3 +69,5 @@ debole
 un linguaggio può effettuare conversioni in maniera autonoma
 
 Java è a tipizzazione statica e forte
+
+https://aulab-it.zoom.us/j/83528351981?pwd=fPZomJdrawIDWIfq4x36wdsbLgxsNu.1
