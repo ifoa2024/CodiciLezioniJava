@@ -15,7 +15,7 @@ public class HelloWorld{
         int ripeti = 3;
 
         do{
-            System.out.println("Faccio qualcosa"+ripeti+" ");
+            System.out.println("Faccio qualcosa"+ripeti+"!");
             if(ripeti == 3){
                 repeat = false;
             }   
