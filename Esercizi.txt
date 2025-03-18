@@ -1,0 +1,8 @@
+Esercitazione OOP1
+Immergetevi nel contesto delle vostre aziende e:
+
+- Create una classe ed estendetela con almeno due sottoclassi
+- Gestite le diverse tipologie di modificatori utilizzando getter e setter
+- Scrivere il metodo equals in modo da confrontare due oggetti della stessa classe
+
+(testate i diversi suggerimenti e prove fatti a lezione)
