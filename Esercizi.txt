@@ -1,5 +1,4 @@
 Link zoom
-https://aulab-it.zoom.us/j/85234099084?pwd=G5lzYOspF1Fhv88r7rroGTbfDYO0Ya.1
 
 Esercitazione OOP1
 Immergetevi nel contesto delle vostre aziende e:
@@ -9,3 +8,39 @@ Immergetevi nel contesto delle vostre aziende e:
 - Scrivere il metodo equals in modo da confrontare due oggetti della stessa classe
 
 (testate i diversi suggerimenti e prove fatti a lezione)
+
+
+Esercitazione OOP2
+1 - Ricreare l'esempio visto a lezione con "Person" e figlie applicandole ad un dominio ben preciso (scuola, pubblica amministrazione ecc ecc)
+
+
+2- Esercizio del ristorante:
+
+	Creare una classe Restaurant
+
+		Attributi
+			- name
+			- dishes → Array di oggetti di classe Dish
+			- drinks → Array di oggetti di classe Drink
+		metodi
+			- stampamenu → Ciclare prima i piatti stampando nome e prezzo, poi ripetere la stessa 			         
+                                       operazione con i drink
+
+	Creare una classe Dish con
+
+		attributi
+			- nome
+			- prezzo
+		   	- ( opzionale ) ingredienti
+
+		metodi
+			- getter e setter
+
+	creare una classe Drink con
+
+		attributi
+			- nome
+			- prezzo
+		metodi
+			- getter e setter
+	Nella classe App all'interno del metodo main dare la possibilità di stampare i menu dei ristoranti
