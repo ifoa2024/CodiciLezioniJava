@@ -1,5 +1,4 @@
 Link zoom
-https://aulab-it.zoom.us/j/82446026773?pwd=bzNxJwEim2JtHGUuJ3eai1VtHoTVXq.1
 
 Esercitazione OOP1
 Immergetevi nel contesto delle vostre aziende e:
@@ -45,3 +44,11 @@ Esercitazione OOP2
 		metodi
 			- getter e setter
 	Nella classe App all'interno del metodo main dare la possibilità di stampare i menu dei ristoranti
+
+
+COLLECTION
+1 - Creare una List con N oggetti di una classe creata da voi. Creare un’altra List vuota, ciclare la prima lista filtrando gli elementi in base ad un criterio scelto da voi e inserire gli elementi nella seconda lista
+
+2 - Scrivere un programma Java per aggiornare un elemento della lista specifico in base al suo indice. Esempio, create una lista di persone, chiedete all’utente quale persona vuole modificare, chiedete i dati e aggiornate quell’elemento della lista
+
+3- Scrivere un programma che crei una lista di elementi e che ne rimuova i duplicati
