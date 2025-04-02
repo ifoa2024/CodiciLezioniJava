@@ -1,5 +1,5 @@
 Link zoom
-https://aulab-it.zoom.us/j/84796777450?pwd=vZOjm4IHRJjCaRr5JLrxOVkqyobX84.1
+.....coming soon
 
 Esercitazione OOP1
 Immergetevi nel contesto delle vostre aziende e:
@@ -53,3 +53,24 @@ COLLECTION
 2 - Scrivere un programma Java per aggiornare un elemento della lista specifico in base al suo indice. Esempio, create una lista di persone, chiedete all’utente quale persona vuole modificare, chiedete i dati e aggiornate quell’elemento della lista
 
 3- Scrivere un programma che crei una lista di elementi e che ne rimuova i duplicati
+
+ESERCIZIO COLLECTIONE GENERICS
+- Creare un aeroporto:
+	- create dei passeggeri
+	- create degli aerei
+	- cretae dei gate
+	- assegnate i passeggeri ai voli
+	- assegnate dei voli ai gate
+	- stampate gate, voli e passeggeri
+	- verificare l'esistenza di un volo
+	- eliminare passeggeri dai voli
+	- eliminare voli dai gate
+
+	PLUS DI DIFFICOLTà
+	- come nuovo passeggero vorrei entrare in un aereo, se l'aereo è pieno mi nega l'operazione altrimenti mi aggiunge e mi fa l'elenco di tutti i passeggeri del volo specifico
+
+	PLUS PLUS PLUS DIFFICOLA'
+	- cercare un passeggero e se esiste mi dice in quale volo ed il gate dell'aereo
+
+Esistono tante soluzioni tra le più disparate e le più disperate. Cercate quella più efficiente.Dedicatevi con calmissima ai singoli problemi e risolveteli un po' per volta senza fretta.
+IMMAGINATE COSA FARE PRIMA DI SCRIVERE CODICE......E' UN OBBLIGO.....
