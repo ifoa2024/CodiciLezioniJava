@@ -54,7 +54,7 @@ COLLECTION
 
 3- Scrivere un programma che crei una lista di elementi e che ne rimuova i duplicati
 
-ESERCIZIO COLLECTIONE GENERICS
+ESERCIZIO COLLECTION E GENERICS
 - Creare un aeroporto:
 	- create dei passeggeri
 	- create degli aerei
