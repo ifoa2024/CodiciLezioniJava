@@ -58,7 +58,7 @@ ESERCIZIO COLLECTION E GENERICS
 - Creare un aeroporto:
 	- create dei passeggeri
 	- create degli aerei
-	- cretae dei gate
+	- create dei gate
 	- assegnate i passeggeri ai voli
 	- assegnate dei voli ai gate
 	- stampate gate, voli e passeggeri
