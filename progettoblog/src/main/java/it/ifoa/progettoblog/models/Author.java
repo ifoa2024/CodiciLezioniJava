@@ -3,6 +3,8 @@ package it.ifoa.progettoblog.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +16,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="authors")
+@JsonIgnoreProperties({"id"})
 public class Author {
 
     @Id
@@ -30,6 +33,7 @@ public class Author {
     private String email;
 
     @OneToMany(mappedBy="author")
+    @JsonIgnoreProperties({"author"})
     private List<Post> posts = new ArrayList<Post>();
 
     public Author() {
@@ -65,6 +69,14 @@ public class Author {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
 }

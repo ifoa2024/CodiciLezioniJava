@@ -1,6 +1,9 @@
 package it.ifoa.progettoblog.models;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,6 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "posts")
+// @JsonIgnoreProperties({"author"})
 public class Post {
 
     @Id
@@ -29,10 +33,13 @@ public class Post {
 
     @ManyToOne
     @JoinColumn(name="author_id")
+    @JsonIgnoreProperties({"posts"})
     private Author author;
 
     @OneToMany(mappedBy="post")
-    private List<Comment> comments;
+    @JsonIgnoreProperties({"post"})
+    private List<Comment> comments = new ArrayList<Comment>();
+
 
     public Post() {
     }
@@ -75,6 +82,14 @@ public class Post {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
 }
