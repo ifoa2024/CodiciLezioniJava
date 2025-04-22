@@ -12,8 +12,8 @@ import it.ifoa.progettoblog.models.Comment;
 import it.ifoa.progettoblog.repositories.CommentRepository;
 
 @Controller
-@RequestMapping("/comments")
-public class CommentController {
+@RequestMapping("/api/comments")
+public class CommentRestController {
 
     @Autowired
     private CommentRepository commentRepository;

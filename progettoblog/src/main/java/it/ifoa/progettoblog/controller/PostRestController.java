@@ -12,8 +12,8 @@ import it.ifoa.progettoblog.models.Post;
 import it.ifoa.progettoblog.repositories.PostRepository;
 
 @Controller
-@RequestMapping("/posts")
-public class PostController {
+@RequestMapping("/api/posts")
+public class PostRestController {
 
     @Autowired
     private PostRepository postRepository;
