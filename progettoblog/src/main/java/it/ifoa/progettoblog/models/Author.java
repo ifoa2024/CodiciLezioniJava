@@ -79,4 +79,8 @@ public class Author {
         this.posts = posts;
     }
 
+    public String getFullname(){
+        return name + " " + surname;
+    }
+
 }

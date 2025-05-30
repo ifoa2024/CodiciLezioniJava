@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import it.ifoa.progettoblog.dtos.AuthorDto;
 import it.ifoa.progettoblog.models.Author;
 import it.ifoa.progettoblog.models.Post;
 import it.ifoa.progettoblog.repositories.AuthorRepository;
@@ -33,24 +34,24 @@ public class AuthorRestController {
     // @RequestMapping(method=RequestMethod.GET)
     // public @ResponseBody List<Author> getAllAuthor(){
     @GetMapping
-    public List<Author> getAllAuthor(){
+    public List<AuthorDto> getAllAuthor(){
         return authorService.readAll();
     }
 
     // @RequestMapping(value="/{id}", method=RequestMethod.GET)
     @GetMapping("{id}")
     // public @ResponseBody Author getAuthor(@PathVariable("id") Long id){
-    public Author getAuthor(@PathVariable("id") Long id){
+    public AuthorDto getAuthor(@PathVariable("id") Long id){
         return authorService.read(id);
     }
 
     @PostMapping
-    public Author saveAuthor(@RequestBody Author author){
+    public AuthorDto saveAuthor(@RequestBody Author author){
         return authorService.create(author);
     }
 
     @PutMapping("{id}")
-    public Author updateAuthor(@PathVariable("id") Long id, @RequestBody Author author){
+    public AuthorDto updateAuthor(@PathVariable("id") Long id, @RequestBody Author author){
         return authorService.update(id, author);
     }
 
