@@ -81,6 +81,15 @@ MODEL MAPPER
 - Ci consentono di creare dei bean(oggetti istanziati) all'interno del nostro contesto ma ricordiamo che correderanno sempre e solo medoti che istanziano l'oggeto
 
 Mapping Dto in Dao
+- La trasformazione da Dao a Dto, e viceversa, possiamo applicarla solo tramite un mapping
+- La corrispondenza fra nomi di attributi del Dto e quelli del Dao porta ad un mapping automatico
+- Per tutti gli altri attributi che non hanno corispondenza 1 a 1 con il Dao va esplicitato il mapping
+- Per effettuare queste operazioni ci affidiamo ad un mapper, model mapper è quello meglio integrato in spring
+- mapper.map(ORIGINE,DESTINAZIONE); -> si attiva in questo modo:
+                                            - nell'origine esiste un attributo PUBLIC corrispondente per nome ad un attributo PUBLIC nella destinazione?
+                                            Se si matching effettuato, diversamente farà riferimento ai getter ed i setter
+                                            - viene attivato un getter di un attributo nell'origine, se esiste un setter corrispondente nella destinazione avverrà la mappatura
+                                            - per gli attributo che hanno un setter nella destinazione ma non un getter nell'origine, il loro valore rimarrà a null finchè non verrà esplicitata una mappatura
 
 Optional
 - E' un tipologia particolare di oggetto, comunica al framework che questo oggetto può esistere come non esistere ma non sarà mai null. Se non esiste sarà al massimo un oggetto vuoto.
