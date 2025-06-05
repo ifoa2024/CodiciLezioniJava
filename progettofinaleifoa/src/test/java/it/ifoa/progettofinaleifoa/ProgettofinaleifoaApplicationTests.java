@@ -51,4 +51,69 @@ class ProgettofinaleifoaApplicationTests {
         assertThat(productRepository.findByName("Laptop")).extracting("name").containsOnly("Laptop");
     }
 
+	@Test
+    void findByPriceLessThan() {
+        assertThat(productRepository.findByPriceLessThan(1000))
+        .extracting("name")
+        .containsExactlyInAnyOrder("Smartphone", "Wireless Headphones");
+    }
+    
+    @Test
+    void findByDescriptionContaining() {
+        assertThat(productRepository.findByDescriptionContaining("display"))
+        .extracting("name")
+        .containsOnly("Smartphone");
+    }
+    
+    @Test
+    void findByExactPrice() {
+        assertThat(productRepository.findByExactPrice(150))
+        .extracting("name")
+        .containsOnly("Wireless Headphones");
+    }
+    
+    @Test
+    void findByExactName() {
+        assertThat(productRepository.findByExactName("Smartphone"))
+        .extracting("name")
+        .containsOnly("Smartphone");
+    }
+    
+    //Altre
+    @Test
+    void findByPriceGreaterThan() {
+        assertThat(productRepository.findByPriceGreaterThan(700))
+        .extracting("name")
+        .containsExactlyInAnyOrder("Laptop", "Smartphone");
+    }
+    
+    @Test
+    void findByNameContainingIgnoreCase() {
+        assertThat(productRepository.findByNameContainingIgnoreCase("phone"))
+        .extracting("name")
+        .containsExactlyInAnyOrder("Smartphone", "Wireless Headphones");
+    }
+    
+    @Test
+    void findByNameAndPriceLessThan() {
+        assertThat(productRepository.findByNameAndPriceLessThan("Smartphone", 900))
+        .extracting("name")
+        .containsOnly("Smartphone");
+    }
+    
+    @Test
+    void findProductsByExactPrice() {
+        assertThat(productRepository.findProductsByExactPrice(800))
+        .extracting("name")
+        .containsOnly("Smartphone");
+    }
+    
+    @Test
+    void findProductsByNamePrefix() {
+        assertThat(productRepository.findProductsByNamePrefix("Wire"))
+        .extracting("name")
+        .containsOnly("Wireless Headphones");
+    }
+    
+
 }
