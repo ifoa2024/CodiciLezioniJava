@@ -1,9 +1,13 @@
 package it.ifoa.progettofinaleifoa.services;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import it.ifoa.progettofinaleifoa.dtos.ProductDto;
 import it.ifoa.progettofinaleifoa.models.Product;
@@ -19,13 +23,21 @@ public class ProductService implements CrudService<ProductDto, Product, Long>{
 
     @Override
     public List<ProductDto> readAll() {
-        return productRepository.findAll();
+        List<ProductDto> dtos = new ArrayList<ProductDto>();
+        for (Product product : productRepository.findAll()) {
+            dtos.add(mapper.map(product, ProductDto.class));
+        }
+        return dtos;
     }
 
     @Override
     public ProductDto read(Long key) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'read'");
+        Optional<Product> optProduct = productRepository.findById(key);
+        if(optProduct.isPresent()){
+            return mapper.map(optProduct.get(),ProductDto.class);
+        }else{
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product id=" + key + " not found");
+        }
     }
 
     @Override

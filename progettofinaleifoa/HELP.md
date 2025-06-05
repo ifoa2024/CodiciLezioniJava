@@ -79,3 +79,9 @@ MODEL MAPPER
 
 @Bean
 - Ci consentono di creare dei bean(oggetti istanziati) all'interno del nostro contesto ma ricordiamo che correderanno sempre e solo medoti che istanziano l'oggeto
+
+Mapping Dto in Dao
+
+Optional
+- E' un tipologia particolare di oggetto, comunica al framework che questo oggetto può esistere come non esistere ma non sarà mai null. Se non esiste sarà al massimo un oggetto vuoto.
+- .get() -> trasforma sempre l'oggetto optional nell'oggetto effettivo di una specificata tipologia
