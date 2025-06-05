@@ -70,3 +70,12 @@ Query Native
 
 AssertJ
 - Libreria di asserzioni che ci consente di effettuare test in modo facile ed intuitivo
+
+SERVICE
+- Ricordiamo che utilizziamo i service per inserire al loro interno la logica di business, solo loro conterranno queste logiche
+
+MODEL MAPPER
+- Libreria compatibile con Spring che ci permette di fare il mapping dei dto(data transfer object) verso i dao(models, data access object) e viceversa
+
+@Bean
+- Ci consentono di creare dei bean(oggetti istanziati) all'interno del nostro contesto ma ricordiamo che correderanno sempre e solo medoti che istanziano l'oggeto
