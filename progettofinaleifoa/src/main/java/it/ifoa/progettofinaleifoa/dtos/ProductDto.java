@@ -8,7 +8,7 @@ public class ProductDto {
     private String name;
     private String description;
     private Long price;
-    private Category category;
+    private CategoryDto category;
 
     public ProductDto() {
     }
@@ -45,11 +45,11 @@ public class ProductDto {
         this.price = price;
     }
 
-    public Category getCategory() {
+    public CategoryDto getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(CategoryDto category) {
         this.category = category;
     }
 

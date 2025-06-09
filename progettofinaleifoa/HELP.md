@@ -101,3 +101,16 @@ METODI HTTTP
 - Put -> Modificano(aggiornano) una risorsa
 - Patch -> Modificano una parte della risorsa
 - Delete -> Cancellano una risorsa
+
+ENDPOINT
+localhost:8080/api/products
+
+Model
+- E' l'oggetto scatola che contiene tutti i dati utili a riempire i buchi presenti nel template html da completare
+
+resources
+- static
+    - risorse statiche sono quella tipologia di risorse che vengono inserite staticamente nella pagine html
+    - caratterizzato molto dal client side rendering
+- templates
+    - caratterizzando il server side rendering, quindi renderizzazione della pagina html lato server
