@@ -7,12 +7,14 @@ import java.util.Optional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import it.ifoa.progettofinaleifoa.dtos.ProductDto;
 import it.ifoa.progettofinaleifoa.models.Product;
 import it.ifoa.progettofinaleifoa.repositories.ProductRepository;
 
+@Service
 public class ProductService implements CrudService<ProductDto, Product, Long>{
 
     @Autowired
@@ -42,20 +44,22 @@ public class ProductService implements CrudService<ProductDto, Product, Long>{
 
     @Override
     public ProductDto create(Product model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'create'");
+        return mapper.map(productRepository.save(model),ProductDto.class);
     }
 
     @Override
     public ProductDto update(Long key, Product model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+         if (productRepository.existsById(key)) {
+                model.setId(key);
+                return mapper.map(productRepository.save(model), ProductDto.class) ;
+            } else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+            }
     }
 
     @Override
     public void delete(Long key) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        productRepository.deleteById(key);
     }
 
 }

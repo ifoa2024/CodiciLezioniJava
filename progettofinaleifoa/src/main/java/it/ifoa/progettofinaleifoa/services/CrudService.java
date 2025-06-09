@@ -1,16 +1,20 @@
 package it.ifoa.progettofinaleifoa.services;
 
 import java.util.List;
-
-public interface CrudService<ReadDto, Model, Key>{
+/*
+ * D = Dto ricevuto
+ * M = Dao(model) da manipolare
+ * K = Tipologia dell'id da manipolare
+ */
+public interface CrudService<D, M, K>{
     //recupera tutti i dati
-    List<ReadDto> readAll();
+    List<D> readAll();
     //recupera solo un dato preciso
-    ReadDto read(Key key);
+    D read(K k);
     //crea un nuovo dato
-    ReadDto create(Model model);
+    D create(M m);
     //modifica un dato esistente
-    ReadDto update(Key key, Model model);
+    D update(K k, M m);
     //cancella un dato esistente
-    void delete(Key key);
+    void delete(K k);
 }

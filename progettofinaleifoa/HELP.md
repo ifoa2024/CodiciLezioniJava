@@ -94,3 +94,10 @@ Mapping Dto in Dao
 Optional
 - E' un tipologia particolare di oggetto, comunica al framework che questo oggetto può esistere come non esistere ma non sarà mai null. Se non esiste sarà al massimo un oggetto vuoto.
 - .get() -> trasforma sempre l'oggetto optional nell'oggetto effettivo di una specificata tipologia
+
+METODI HTTTP
+- Get -> Restituiscono una risorsa
+- Post -> Creano una risorsa
+- Put -> Modificano(aggiornano) una risorsa
+- Patch -> Modificano una parte della risorsa
+- Delete -> Cancellano una risorsa
