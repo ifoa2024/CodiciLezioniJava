@@ -31,10 +31,17 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain configSecurityFilterChain(HttpSecurity http) throws Exception{
-        http.authorizeHttpRequests((authorize) -> authorize.requestMatchers("/api/**").permitAll().anyRequest().authenticated())
-        .formLogin((formLogin) -> formLogin.loginPage("/login").permitAll())
-        .logout((logout) -> logout.logoutUrl("/logout").logoutSuccessUrl("/").permitAll())
-        .csrf((csrf) -> csrf.ignoringRequestMatchers("/api/**")); 
+
+        http.authorizeHttpRequests(
+                (authorize) -> authorize.requestMatchers("/api/**").permitAll().anyRequest().authenticated())
+            .formLogin((formLogin) -> formLogin.loginPage("/login")
+                        .defaultSuccessUrl("/products", true)
+                        .permitAll())
+            .logout((logout) -> logout.logoutUrl("/logout")
+                                    .logoutSuccessUrl("/"))
+            .csrf(
+                    (csrf) -> csrf.ignoringRequestMatchers("/api/**"));
+
         return http.build();
     }
 

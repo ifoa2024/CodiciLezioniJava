@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class AuthController {
 
-    @GetMapping
+    @GetMapping("login")
     public String login(Model viewModel){
         viewModel.addAttribute("title", "Login");
         return "login";
