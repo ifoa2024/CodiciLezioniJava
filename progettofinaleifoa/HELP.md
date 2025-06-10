@@ -114,3 +114,20 @@ resources
     - caratterizzato molto dal client side rendering
 - templates
     - caratterizzando il server side rendering, quindi renderizzazione della pagina html lato server
+
+
+Thymeleaf
+- Motore di template, ci permette di agganciare la logica BE alle pagine Html
+- xmlns:th="http://www.thymeleaf.org", import del namescape di thymeleaf, mappa tutto sul suffisso "th"
+
+th:text -> è un comando di thymeleaf, e attiva il meccansmo di manipolazione di un campo testo
+th:href -> attiva il meccanismo di creazione e manipolazione di link
+@{/products/create} -> "@" indica che il path da elaborare è di tipo dinamico, vuol dire che il path potrebbe anche possedere variabili dinamiche
+${title} -> SPEL(Spring expression language) definito anche "dialect" è possiede una sintassi specifica
+
+th:each -> indca a thymeleaf che deve attivare un foreach
+
+"@{/products/delete/{id}(id=${product.id})}" -> sinstassi di elaborazione dinamica det link, formato da due parti a sinistra il path che possiede le variabili e destra, all'interno delle parentesi tonde viene dichiarato come tradurre quella variabile dinamica
+
+SPEL
+- $ -> si riferisce a variabili dinamiche

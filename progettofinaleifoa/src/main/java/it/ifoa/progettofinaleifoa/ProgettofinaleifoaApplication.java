@@ -12,6 +12,7 @@ public class ProgettofinaleifoaApplication {
 		SpringApplication.run(ProgettofinaleifoaApplication.class, args);
 	}
 
+
 	@Bean
     public ModelMapper instanceModelMapper(){
         ModelMapper mapper = new ModelMapper();
