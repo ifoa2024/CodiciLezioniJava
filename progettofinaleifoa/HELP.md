@@ -124,10 +124,21 @@ th:text -> è un comando di thymeleaf, e attiva il meccansmo di manipolazione di
 th:href -> attiva il meccanismo di creazione e manipolazione di link
 @{/products/create} -> "@" indica che il path da elaborare è di tipo dinamico, vuol dire che il path potrebbe anche possedere variabili dinamiche
 ${title} -> SPEL(Spring expression language) definito anche "dialect" è possiede una sintassi specifica
+*{name}" -> "*" è il simbolo più utilizzato per indicare un puntatore, quindi indica che stiamo puntando a qualcosa di specifico
 
-th:each -> indca a thymeleaf che deve attivare un foreach
+th:each -> indica a thymeleaf che deve attivare un foreach
+th:action -> indica a thymeleaf che deve attivare l'attribuot action di un form
+th:object -> indichiamo a thymeleaf che il form dovrà manipolare un oggetto che gli sta arrivando dal BE
+th:field -> indica a thyemeleaf che quel campo di input sarà collegato ad un attributo dell'oggetto che sta manipolando
+th:value -> elaborazione dinamica da parte di thymeleaf del value delle option
+th:errors -> cattura gli errori in sesssione, quindi anche le validazioni
+th:if -> attiva il meccanismo di if in un tag
 
 "@{/products/delete/{id}(id=${product.id})}" -> sinstassi di elaborazione dinamica det link, formato da due parti a sinistra il path che possiede le variabili e destra, all'interno delle parentesi tonde viene dichiarato come tradurre quella variabile dinamica
 
 SPEL
 - $ -> si riferisce a variabili dinamiche
+
+
+REDIRECT
+- Tutte gli handler collegati a rotte di tipo Post, Put, Delete non restitusicono una vista ma fanno la redirect
