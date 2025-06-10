@@ -129,7 +129,7 @@ ${title} -> SPEL(Spring expression language) definito anche "dialect" è possied
 th:each -> indica a thymeleaf che deve attivare un foreach
 th:action -> indica a thymeleaf che deve attivare l'attribuot action di un form
 th:object -> indichiamo a thymeleaf che il form dovrà manipolare un oggetto che gli sta arrivando dal BE
-th:field -> indica a thyemeleaf che quel campo di input sarà collegato ad un attributo dell'oggetto che sta manipolando
+th:field -> indica a thyemeleaf che quel campo di input sarà collegato ad un attributo dell'oggetto che sta manipolando. Se l'oggetto che stiamo manipolando ha dei valori nei campi questo comando ce li mostrerà nel campo di input
 th:value -> elaborazione dinamica da parte di thymeleaf del value delle option
 th:errors -> cattura gli errori in sesssione, quindi anche le validazioni
 th:if -> attiva il meccanismo di if in un tag
