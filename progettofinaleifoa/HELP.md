@@ -142,3 +142,14 @@ SPEL
 
 REDIRECT
 - Tutte gli handler collegati a rotte di tipo Post, Put, Delete non restitusicono una vista ma fanno la redirect
+
+
+SPRING SECURITY
+- Progetto di spring che ci consente di inserie sicurezza all'interno del nostro progetto
+- Per sicurezza si intende sempre che, chi non ha il permesso di fare qualcosa non deve farlo
+- Ci basta inserire la dipendenza di spring security nel pom per nitare già che veniamo bloccati in entrata
+- Per poter sovrascrivere il comportamento di default abbiamo bisogno di creare un file di configurazione
+- All'interno del file di configurazione creeremo i bean utili ai nostri scopi
+- Fondamentale il bean di encoding, noi utilizziamo BCrypt
+- Altro bean che utilizziamo è quello per la creazione di utenti in memoria, utile in fase di testing o prototipazione che tramite un builder costruisce gli utenti in memoria ram
+- Il form di Login richiede solo che i campi di inserimento dell username e password abbiamo "name" corrispondete a "username" , "password". Solo cosi riuscirà ad attivare tutti i meccanismi di sovrascrizione e attivane del sistema.
